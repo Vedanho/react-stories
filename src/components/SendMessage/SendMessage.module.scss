@@ -1,0 +1,46 @@
+.input_wrapper {
+  display: flex;
+  justify-content: space-around;
+  padding: 0.8em 0.5em;
+  gap: 0.5em;
+  background-color: black;
+
+  input {
+    padding: 0.5em 0.7em;
+    border-radius: 15px;
+    border: 1px solid grey;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    font-size: 0.7em;
+
+    &::placeholder {
+      color: white;
+      font-size: 0.7em;
+    }
+  }
+
+  button {
+    font-size: 1.1em;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  .likes_button {
+    align-self: flex-end;
+    padding: 0em;
+  }
+
+  .likes_button_liked {
+    align-self: flex-end;
+    padding: 0em;
+    color: red;
+  }
+
+  .send_message_button {
+    align-self: flex-end;
+    padding: 0em;
+  }
+}
