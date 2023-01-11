@@ -1,7 +1,9 @@
 .line_container {
-    width: 200px;
+    width: 90%;
+    margin: auto;
     display: flex;
-    gap: 20px
+    gap: 10px;
+    margin-top: 0.5em;
 }
 
 .line_item_wrapper {
@@ -9,17 +11,33 @@
     width: 100%;
     height: 1px;
     border-radius: 10px;
-    background-color: black
+    background-color: black;
 }
 
 .line_item {
     position: absolute;
-    width: 0px;
     height: 1px;
     border-radius: 10px;
     background-color: green;
-    animation: progress 10s infinite linear
+    transform: translateX(100%);
+    transition-duration: 4s;
+
+    &.active {
+        transform: translateX(0);
+        transition-duration: 4s;
+        background-color: blueviolet
+    }
 }
+
+// .line_item_active {
+//     position: absolute;
+//     height: 1px;
+//     border-radius: 10px;
+//     background-color: green;
+//     transform: translateX(0);
+//     transition-duration: 6s;
+//     // animation: progress 4s infinite linear;
+// }
 
 @keyframes progress {
         0%{
