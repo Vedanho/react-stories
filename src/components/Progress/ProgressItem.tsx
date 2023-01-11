@@ -12,15 +12,17 @@ const ProgressItem: React.FC<ProgressItemProps> = ({
   setActiveIndex,
   index,
 }) => {
-
-  React.useEffect(() => {
-    setActiveIndex(index);
-  }, [activeIndex]);
+  const handleTransition = (): void => {
+    setTimeout(() => {
+      setActiveIndex(activeIndex + 1);
+    }, 1000);
+  };
 
   return (
     <div className={styles.line_item_wrapper}>
       <div
-        className={index === activeIndex ? styles.line_item : "undefined"}
+        onTransitionEnd={handleTransition}
+        className={"line_item " + `${activeIndex === index ? "active" : ""}`}
       ></div>
     </div>
   );
